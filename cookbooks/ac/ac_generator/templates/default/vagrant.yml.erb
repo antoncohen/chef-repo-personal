@@ -1,0 +1,14 @@
+---
+recipes:
+  - <%= cookbook_name %>
+machines:
+  - name: xenial
+    default: true
+    box: bento/ubuntu-16.04
+    update_apt: true
+    memory: 2048
+    uuid: <%= SecureRandom.uuid %>
+  - name: centos7
+    box: bento/centos-7.2
+    memory: 2048
+    uuid: <%= SecureRandom.uuid %>
